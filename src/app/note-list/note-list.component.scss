@@ -1,0 +1,39 @@
+
+.note-list-container{
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+}
+
+@media (min-width: 450px){
+    .note-list-container{
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+    }
+
+}
+    @media (min-width: 680px){
+    .note-list-container{
+        -webkit-column-count: 3; /* Chrome, Safari, Opera */
+        -moz-column-count: 3; /* Firefox */
+        column-count: 3;
+    }
+        
+}
+    @media (min-width: 900px){
+    .note-list-container{
+        -webkit-column-count: 4; /* Chrome, Safari, Opera */
+        -moz-column-count: 4; /* Firefox */
+        column-count: 4;
+    }
+        
+}
+    @media (min-width: 1150px){
+    .note-list-container{
+        -webkit-column-count: 5; /* Chrome, Safari, Opera */
+        -moz-column-count: 5; /* Firefox */
+        column-count: 5;
+    }
+        
+}

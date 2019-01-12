@@ -1,0 +1,48 @@
+@font-face{
+    font-family: 'childrens';
+    src:url('../../assets/fonts/childrens-party-personal-use.regular.ttf')
+}
+
+
+.nav-container{
+background: #222222;
+height: 65px;
+font-family: 'childrens';
+letter-spacing: 2px;
+font-size: 20px;
+}
+.Logo{
+    display: flex;
+    align-items: center;
+    &:focus{
+        outline: none;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+    img{
+      height: 60px;
+    }
+    nav{
+        a{
+            color: white;
+            text-decoration: none;
+            &:hover{
+                color: gold;
+            }
+        }
+    }
+    div{
+        &:hover{
+            color: gold;
+            cursor: pointer;
+        }
+    }
+}
