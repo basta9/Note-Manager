@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <section class="nav-container">
       <header>
         <div routerLink="manager" class="Logo" >
-          <img src="../../assets/notes-logo.png" />
+          <img src="../assets/notes-logo.png" />
           Note Manager
         </div>
         <nav>

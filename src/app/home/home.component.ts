@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 <pre>Write and edit your own personal notes. 
 You can write reminders, checklists and even your grocery list. 
 Your notes, Your desicion!</pre>
-<img src="../../assets/about-img.png"/>
+<img src="../assets/about-img.png"/>
   </section>
   `,
   styleUrls: ['./home.component.scss']
