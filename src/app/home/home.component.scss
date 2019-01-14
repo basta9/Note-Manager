@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'childrens';
-    src:url('../../assets/fonts/childrens-party-personal-use.regular.ttf')
+    src:url('../../assets/fonts/petit.ttf')
 }
 
 .home-container{
@@ -8,7 +8,6 @@
     margin:auto;
     margin-top: 15px;
     font-family: 'childrens';
-    letter-spacing: 1px;
     text-align: center;
     h1{
         font-size: 30px;
@@ -17,7 +16,6 @@
     pre{
         font-size: 24px;
         font-family: 'childrens';
-        letter-spacing: 1px;
     }
     img{
         width: 250px;

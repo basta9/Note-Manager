@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
    <section class="note-manger-container">
     <app-note-add></app-note-add>
+    <hr>
     <app-note-filter></app-note-filter>
     <app-note-list></app-note-list>
   </section>

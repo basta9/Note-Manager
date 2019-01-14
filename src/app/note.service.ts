@@ -55,26 +55,26 @@ export class NoteService {
     return [
       {
         _id: this.makeId(),
-        content: 'Feed the cat',
-        todos: [{ text: 'do this', isDone: false }, { text: 'do that', isDone: true }],
-        bgColor: 'green',
+        content: 'Natural History Museon',
+        todos: [{ text: 'Buy Tickets', isDone: false }, { text: 'dinosaur show', isDone: true }],
+        bgColor: '#DF7F7F',
         txtColor: 'black',
         imgs: ['http://www.jurassicworld.com/sites/default/files/2018-06/960x540_0001_trex.png',
           'http://www.jurassicworld.com/sites/default/files/2018-06/960x540_0000_triceratops.png']
       },
       {
         _id: this.makeId(),
-        content: 'Call Grandma',
-        todos: [{ text: 'dont do this', isDone: true }, { text: 'say hello', isDone: true }],
-        bgColor: 'red',
+        content: 'My Cat',
+        todos: [{ text: 'Buy cat toys', isDone: true }, { text: 'Feed cat', isDone: true }],
+        bgColor: '#76C9B6',
         txtColor: 'black',
         imgs: ['https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg']
       },
       {
         _id: this.makeId(),
-        content: 'write JS',
-        todos: [{ text: 'Clean house', isDone: false }, { text: 'do laundry', isDone: false }],
-        bgColor: 'blue',
+        content: 'Write an Application',
+        todos: [{ text: 'responsive', isDone: false }, { text: 'Deploy it', isDone: false }],
+        bgColor: '#D6EE5C',
         txtColor: 'black',
         imgs: []
       },

@@ -4,7 +4,7 @@ import { Component, OnInit, Input, Output, EventEmitter, Inject } from '@angular
 @Component({
   selector: 'app-note',
   template: `
-    <div (click)="$event.stopPropagation(); isEditing = true" class="note-container" [style.background-color]="getBg()" [style.color]="getTextColor()">
+    <div (click)="$event.stopPropagation(); openEditor()" class="note-container" [style.background-color]="getBg()" [style.color]="getTextColor()">
         <textarea name="content" [(ngModel)]="note.content" class="note-content" placeholder="Write Your Note..."></textarea>
         <app-todo-list (saveTodo)="saveNote($event.isAdding)" *ngIf="note.todos.length > 0" [todos]=note.todos [isEditing]="isEditing"></app-todo-list>
         <img *ngFor="let src of note.imgs" [src]="src" width="140">
@@ -14,20 +14,20 @@ import { Component, OnInit, Input, Output, EventEmitter, Inject } from '@angular
           <div class="editor-btns">
             <div class="color-picker">
               <input (click)="$event.stopPropagation();" name="color" [(ngModel)]="note.bgColor" type="color" title="Background Color">
-              <img src="../../assets/color-picker.png" />
+              <img src="../assets/color-picker.png" />
             </div>
             <div class="color-picker">
               <input (click)="$event.stopPropagation();" name="color" [(ngModel)]="note.txtColor" type="color" title="Text Color">
-              <img src="../../assets/text-color.png" />
+              <img src="../assets/text-color.png" />
             </div>
-            <img class="add-todo" src="../../assets/checklist.png" (click)="$event.stopPropagation(); addTodo()" title="Add To-do"/>
+            <img class="add-todo" src="../assets/checklist.png" (click)="$event.stopPropagation(); addTodo()" title="Add To-do"/>
             <form
               class="publish-form"
               action
               method="POST"
               enctype="multipart/form-data"
               >
-              <img src="../../assets/add-img.png"/>
+              <img src="../assets/add-img.png"/>
               <input (input)="saveImg($event)" type="file" name="img" title="Add Image">
             </form>
           </div>
@@ -60,6 +60,10 @@ export class NoteComponent implements OnInit {
 
   getBg() {
     return this.note.bgColor
+  }
+
+  openEditor() {
+    this.isEditing = true;
   }
 
   getTextColor() {
