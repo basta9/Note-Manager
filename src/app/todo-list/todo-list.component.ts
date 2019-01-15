@@ -8,8 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       <li *ngFor="let todo of todos; let i = index" class="todo-container">
         <input (click)="$event.stopPropagation(); setCheckbox()" name="checkbox" class="todo-checkbox" type="checkbox" [(ngModel)]="todo.isDone">
         <input  name="todo-text" #text class="todo-text" type="text" [(ngModel)]="todo.text">
-        <button *ngIf="isEditing" (click)="removeTodo(i)">X</button>
-        <!-- {{last}} -->
+        <span *ngIf="isEditing" (click)="removeTodo(i)">X</span>
       </li>
     </ul>
   `,

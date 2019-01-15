@@ -20,6 +20,22 @@
     break-inside: avoid;
 }
 
+
+.img-container{
+    position: relative;
+span{
+    position: absolute;
+    font-weight: bold;
+    right: 15px;
+    cursor: pointer;
+}
+}
+
+.note-img{
+width: 150px;
+object-fit: cover;
+}
+
 .note-content{
 font-family: 'calling';
 letter-spacing: 1px;
@@ -41,12 +57,14 @@ font-size: 16px;
     transition: .4s;
     overflow: hidden;
     opacity: 1;
+    visibility: visible;
 }
 .hide{
     height: 0;
     transition: .4s;
     overflow: hidden;
     opacity: 0;
+    visibility: hidden;
 }
 
 .editor-btns{

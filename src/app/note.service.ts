@@ -78,6 +78,38 @@ export class NoteService {
         txtColor: 'black',
         imgs: []
       },
+      {
+        _id: this.makeId(),
+        content: 'Wash dishes',
+        todos: [{ text: 'Clean sink', isDone: false }],
+        bgColor: 'lightgreen',
+        txtColor: 'black',
+        imgs: []
+      },
+      {
+        _id: this.makeId(),
+        content: 'Go to the Beach',
+        todos: [{ text: 'Bring sun cream', isDone: false }],
+        bgColor: 'orange',
+        txtColor: 'black',
+        imgs: ['http://res.cloudinary.com/dbjzb1fts/image/upload/v1547543125/xdkcqdtggwnt86j9klyi.jpg']
+      },
+      {
+        _id: this.makeId(),
+        content: 'Sport',
+        todos: [{ text: 'run', isDone: false },{ text: 'swim', isDone: false },{ text: 'lift weight', isDone: false }],
+        bgColor: 'lightpink',
+        txtColor: 'blue',
+        imgs: ['http://res.cloudinary.com/dbjzb1fts/image/upload/v1547543366/q3rcjwhu9zhferkcp4fx.png']
+      },
+      {
+        _id: this.makeId(),
+        content: 'Watch a Movie',
+        todos: [{ text: 'make popcorn', isDone: false }],
+        bgColor: 'gray',
+        txtColor: 'white',
+        imgs: []
+      },
     ]
   }
 

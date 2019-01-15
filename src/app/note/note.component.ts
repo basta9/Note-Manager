@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter, Inject } from '@angular/core';
-// import { TodoListComponent } from '../todo-list/todo-list.component';
 
 @Component({
   selector: 'app-note',
@@ -7,7 +6,10 @@ import { Component, OnInit, Input, Output, EventEmitter, Inject } from '@angular
     <div (click)="$event.stopPropagation(); openEditor()" class="note-container" [style.background-color]="getBg()" [style.color]="getTextColor()">
         <textarea name="content" [(ngModel)]="note.content" class="note-content" placeholder="Write Your Note..."></textarea>
         <app-todo-list (saveTodo)="saveNote($event.isAdding)" *ngIf="note.todos.length > 0" [todos]=note.todos [isEditing]="isEditing"></app-todo-list>
-        <img *ngFor="let src of note.imgs" [src]="src" width="140">
+        <div *ngFor="let src of note.imgs; let i = index" class="img-container">
+          <span *ngIf="isEditing" (click)="$event.stopPropagation(); removeImg(i)">X</span>
+          <img  [src]="src" class="note-img">
+        </div>
         
         <!-- EDIT SECTION -->
         <section [ngClass]="(isEditing)? 'show' : 'hide'">
@@ -70,6 +72,10 @@ export class NoteComponent implements OnInit {
     return this.note.txtColor
   }
 
+  removeImg(idx) {
+    this.note.imgs.splice(idx, 1)
+  }
+
   openCancel() {
     this.isEditing = false
     if (!this.note._id) {
@@ -84,7 +90,7 @@ export class NoteComponent implements OnInit {
   }
   saveImg(ev) {
     ev.preventDefault();
-    this.note.imgs.push('../../assets/loading.gif')
+    this.note.imgs.push('assets/loading.gif')
     this.cloudService.uploadImg(ev.path[1], ev).then(img => {
       this.note.imgs.pop()
       this.note.imgs.push(img.url)
@@ -111,7 +117,9 @@ export class NoteComponent implements OnInit {
 
 
   ngOnInit() {
-    window.addEventListener('click', () => this.isEditing = false)
+    window.addEventListener('click', () => {
+      this.isEditing = false;
+      // this.saveNote()
+    })
   }
-
 }
