@@ -14,20 +14,20 @@ import { Component, OnInit, Input, Output, EventEmitter, Inject } from '@angular
           <div class="editor-btns">
             <div class="color-picker">
               <input (click)="$event.stopPropagation();" name="color" [(ngModel)]="note.bgColor" type="color" title="Background Color">
-              <img src="../assets/color-picker.png" />
+              <img src="assets/color-picker.png" />
             </div>
             <div class="color-picker">
               <input (click)="$event.stopPropagation();" name="color" [(ngModel)]="note.txtColor" type="color" title="Text Color">
-              <img src="../assets/text-color.png" />
+              <img src="assets/text-color.png" />
             </div>
-            <img class="add-todo" src="../assets/checklist.png" (click)="$event.stopPropagation(); addTodo()" title="Add To-do"/>
+            <img class="add-todo" src="assets/checklist.png" (click)="$event.stopPropagation(); addTodo()" title="Add To-do"/>
             <form
               class="publish-form"
               action
               method="POST"
               enctype="multipart/form-data"
               >
-              <img src="../assets/add-img.png"/>
+              <img src="assets/add-img.png"/>
               <input (input)="saveImg($event)" type="file" name="img" title="Add Image">
             </form>
           </div>
